@@ -5,7 +5,7 @@ gpio.setmode(gpio.BCM)
 
 global record
 record = "/mnt/sda/channel"
-global rectime
+global prevtime
 prevtime = {
   2:0, 3:0, 4:0, 7:0, 8:0, 9:0,
   10:0, 11:0, 12:0, 13:0, 17:0,
