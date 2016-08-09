@@ -6,13 +6,12 @@ gpio.setmode(gpio.BCM)
 global record
 record = "/mnt/sda/channel"
 global rectime
-rectime = {
+prevtime = {
   2:0, 3:0, 4:0, 7:0, 8:0, 9:0,
   10:0, 11:0, 12:0, 13:0, 17:0,
   18:0, 19:0, 20:0, 22:0, 23:0,
   24:0, 25:0, 26:0, 27:0
   }
-
 
 # timer function runs in its own thread
 # each minute it appends a new line to each record
@@ -26,10 +25,10 @@ def newline():
 # sensor function prints a tab and the exact current time to it's channel's
 # record each time it is called
 def sensor(channel):
-  rectime[channel] = time.time() - rectime[channel]
   print("Channel %s at %s" % (channel, time.time()))
   with open("%s%s.txt" % (record, channel), "a") as file:
-    file.write("        %s" % (rectime[channel]))
+    file.write("        %s" % (time.time() - prevtime[channel]))
+  prevtime[channel] = time.time()
 
 def main():
   # set up input channels, 2 and 3 have hardware pull-up resistors
@@ -48,7 +47,6 @@ def main():
       Thread(target = newline).start()
   except KeyboardInterrupt:
     gpio.cleanup()
-
 
 if __name__ == "__main__":
   try:
