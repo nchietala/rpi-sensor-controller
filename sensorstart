@@ -1,0 +1,33 @@
+#!/bin/sh
+# /etc/init.d/sensorstart
+### BEGIN INIT INFO
+# Provides:          sensor
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: start listening on gpio
+# Description:       start all the gpio pins listening in a screen session called SENSOR
+### END INIT INFO
+
+# Some things that run always
+
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting the sensor listening"
+    echo "Sensor is listening on session SENSOR"
+    screen -d -m -S SENSOR
+    screen -S SENSOR -X stuff "sudo python /home/pi/sensor.py^M"
+    ;;
+  stop)
+    echo "Stopping the sensor"
+    screen -S SENSOR -X stuff "^C"
+    screen -S SENSOR -X quit
+    ;;
+  *)
+    echo "Usage: /etc/init.d/blah {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
