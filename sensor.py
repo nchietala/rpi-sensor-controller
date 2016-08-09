@@ -35,7 +35,7 @@ def main():
   # 5, 6, 14, 15, 16 and 21 throw errors when used
   gpio.setup(2,  gpio.IN)
   gpio.setup(3,  gpio.IN)
-  gpio.setup([4, 7, 8, 9, 10, 11, 12, 13, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27], gpio.IN, pull$
+  gpio.setup([4, 7, 8, 9, 10, 11, 12, 13, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27], gpio.IN, pull_up_down=gpio.PUD_UP)
 
   for i in range (2,28):
     if i!=5 and i!=6 and i!=14 and i!=15 and i!=16 and i!=21:
