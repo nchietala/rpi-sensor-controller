@@ -8,9 +8,6 @@
 # Description:       start all the gpio pins listening in a screen session called SENSOR
 ### END INIT INFO
 
-# Some things that run always
-
-
 # Carry out specific functions when asked to by the system
 case "$1" in
   start)
@@ -25,7 +22,7 @@ case "$1" in
     screen -S SENSOR -X quit
     ;;
   *)
-    echo "Usage: /etc/init.d/blah {start|stop}"
+    echo "Usage: /etc/init.d/sensorstart {start|stop}"
     exit 1
     ;;
 esac
