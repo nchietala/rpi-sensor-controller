@@ -1,13 +1,10 @@
-The python script needs to be run on a raspberry pi, written for debian, though
-that may not matter.  In order to write to a file you will have to create the
-directory /mnt/sda which will have to be writable by the user that calls the script
+INSTALLATION:
+Install a new copy of raspbian to a raspberry pi, NOOBS is easy to use and can be found HERE:
+https://www.raspberrypi.org/downloads/noobs/
+Connect the pi to a network cable and power, determine it's IP address, connect to it using SSH and run the following commands:
+cd
+wget https://raw.githubusercontent.com/xervir/rpi-sensor-controller/master/install.sh
+sudo sh install.sh
 
-The output files:
-These are designed to be imported to a spreadsheet using tabs as delimiters, each
-line represents one minute of runtime.  It is done this way rather than simply
-one long row or column of data so that a spreadsheet program is not overwhelmed
-by potentially a few million lines.
-
-Each number represents the number of seconds since the last time the input pin
-triggered, the first number subtracts zero, so it's just unix time code for the
-first input.
+USAGE:
+You must have a flash drive formatted to FAT32 insterted into the pi BEFORE you boot it. Keep the flash drive in the pi for the entire duration of your data collecting experiment. When finished turn off the pi BEFORE removing the flash drive to prevent data corruption from pulling a mounted drive.
