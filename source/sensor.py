@@ -11,7 +11,7 @@ gpio.setmode(gpio.BCM)
 __author__     = "Nickholas Hietala"
 __copywrite__  = "Copywrite 2016, Nickholas Hietala"
 __license__    = "MIT"
-__version__    = "1.0"
+__version__    = "1.1.2"
 __maintainer__ = "Nickholas Hietala"
 __status__     = "Production"
 
