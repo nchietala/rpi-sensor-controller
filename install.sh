@@ -15,9 +15,6 @@ chmod 777 /etc/init.d/sensorstart
 # make the start script actually work
 update-rc.d sensorstart defaults
 
-# mount a flash drive at boot
-echo "/dev/sda1       /mnt/sda        vfat    defaults                0       0" >> /etc/fstab
-
 # install screen and python, python because the script runs on it, and screen because it makes it easier to
 # to ensure that the script can be easily monitored without accidentally killing the session it runs in
 apt-get -y install screen python
