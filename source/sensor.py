@@ -1,5 +1,5 @@
 #!usr/bin/env python
-"""Detects and records sensor input on a Raspberry Pi on 20 indepent channels"""
+"""Detects and records sensor input on a Raspberry Pi on 20 independant channels"""
 
 import RPi.GPIO as gpio
 import time
