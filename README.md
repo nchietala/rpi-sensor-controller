@@ -1,4 +1,4 @@
-**INSTALLATION:*** 
+**INSTALLATION:** 
 Install a new copy of raspbian to a raspberry pi, NOOBS is easy to use and can be found HERE:  
 https://www.raspberrypi.org/downloads/noobs/  
 Connect the pi to a network cable and power, determine it's IP address, connect to it using SSH and run the following commands:  
