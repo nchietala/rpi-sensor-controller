@@ -2,6 +2,8 @@
 # /etc/init.d/sensorstart
 ### BEGIN INIT INFO
 # Provides:          sensor
+# Required-Start:
+# Required-Stop:
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
 # Short-Description: start listening on gpio
