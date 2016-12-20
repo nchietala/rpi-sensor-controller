@@ -110,7 +110,9 @@ def switch():
       while system("umount %s" % (drive)):
         system("mount %s %s" % (drive, directory))
         print "Unmounting error, make sure the drive is inserted."
+	gpio.output(15, 0)
         time.sleep(1)
+	gpio.output(15, 1)
       print "Unmounted"
 	  
 	  # turn off the LED to show the drive is safe to remove
@@ -127,7 +129,9 @@ def switch():
       while system("mount %s %s" % (drive, directory)):
         system("umount %s" % (drive))
         print "Mounting error, make sure the dirve is inserted"
+	gpio.output(15, 0)
         time.sleep(1)
+	gpio.output(15, 1)
       print "Mounted"
 	  
 	  # allow the sensors to write to the output files again
