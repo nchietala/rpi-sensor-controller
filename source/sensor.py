@@ -128,7 +128,7 @@ def switch():
 	  # repeatedly attempt to mount the drive until it succeeds
       while system("mount %s %s" % (drive, directory)):
         system("umount %s" % (drive))
-        print "Mounting error, make sure the dirve is inserted"
+        print "Mounting error, make sure the drive is inserted"
 	gpio.output(15, 0)
         time.sleep(1)
 	gpio.output(15, 1)
