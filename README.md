@@ -23,3 +23,5 @@ The LED will blink once each time it records data
 **DO NOT** remove the flash drive while the LED is on  
 **DO NOT** unplug the raspberry pi while the LED is on  
 If the LED is on, it is an indicator that the drive is mounted and it cannot lose power or be safely removed without risking data corruption.
+
+The "MothAnalyzer.jar" file is used to analyze flight patterns collect from moths on mills one foot in diameter that trip a hall sensor once per rotation. Care must be taken to reduce the friction of the mill as close to 0 as possible.

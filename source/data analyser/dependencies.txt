@@ -1,0 +1,6 @@
+This is a program that assumes that the sensor controller has been used to count the rotations
+of moths attached to circular mills and produces PDFs according to how they rotated and tripped
+the hall sensors.
+This program relies on an external library: Apache PDFBox, to write PDF files, it can be
+downloaded from their website for whosoever would choose to compile this rather than using the
+provided jar.
