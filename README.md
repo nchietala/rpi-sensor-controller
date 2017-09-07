@@ -25,3 +25,5 @@ The LED will blink once each time it records data
 If the LED is on, it is an indicator that the drive is mounted and it cannot lose power or be safely removed without risking data corruption.
 
 The "MothAnalyzer.jar" file is used to analyze flight patterns collect from moths on mills one foot in diameter that trip a hall sensor once per rotation. Care must be taken to reduce the friction of the mill as close to 0 as possible.
+
+In order to use the analyzer it must be placed in the same folder with a folder named "lib" containing a copy of Apache PDFBox library (named "PDFBox.jar"), and to actually analyze anything it must be placed in the same folder with the output from the raspberry pi.
